@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace TgaCase.SharedKernel.SeedWork.Repository
+namespace Blog.SharedKernel.SeedWork.Repository
 {
     public class GenericClassProperties
     {

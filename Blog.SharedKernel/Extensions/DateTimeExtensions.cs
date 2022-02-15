@@ -1,6 +1,6 @@
 using System;
 
-namespace TgaCase.SharedKernel.Extensions
+namespace Blog.SharedKernel.Extensions
 {
     public static class DateTimeExtensions
     {

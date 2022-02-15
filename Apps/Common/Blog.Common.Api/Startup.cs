@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using Blog.SharedKernel.SeedWork.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +29,11 @@ namespace Blog.Common.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            var assemblies = new [] { Assembly.Load("Blog.Common.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null") };
+          /*  services.AddMediatR(assemblies);
+            services.AddAutoMapper(assemblies);
+            services.AddTransient<IUnitOfWorkFactory<IProductManagementDbContext>, ProductManagementUnitOfWorkFactory>();
+*/
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "Blog.Common.Api", Version = "v1"});

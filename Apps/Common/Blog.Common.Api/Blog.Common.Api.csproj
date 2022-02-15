@@ -5,7 +5,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3"/>
+        <PackageReference Include="MediatR" Version="10.0.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Blog.Common.Application\Blog.Common.Application.csproj" />
+      <ProjectReference Include="..\Blog.Common.Domain\Blog.Common.Domain.csproj" />
     </ItemGroup>
 
 </Project>

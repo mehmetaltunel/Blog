@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using Dapper;
-using TgaCase.SharedKernel.SeedWork.Repository;
+using Blog.SharedKernel.SeedWork.Repository;
 
-namespace TgaCase.SharedKernel.Utilities
+namespace Blog.SharedKernel.Utilities
 {
     public static class PostgreSqlFunctionSqlNameGenerateUtil
     {
-        public static GenericParameterModel GetInsertOrUpdateFunctionParameters( IList<GenericClassProperties> properties, bool isInsert)
+        public static GenericParameterModel GetInsertOrUpdateFunctionParameters(IList<GenericClassProperties> properties, bool isInsert)
         {
             var param = "";
             DynamicParameters parameters = new DynamicParameters();

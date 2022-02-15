@@ -5,4 +5,18 @@
         <RootNamespace>Common.Application</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Commands\Category" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="11.0.1" />
+      <PackageReference Include="MediatR" Version="10.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Blog.SharedKernel\Blog.SharedKernel.csproj" />
+      <ProjectReference Include="..\Blog.Common.Domain\Blog.Common.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

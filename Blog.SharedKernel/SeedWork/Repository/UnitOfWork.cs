@@ -1,9 +1,9 @@
 using System.Data;
-using TgaCase.SharedKernel.SeedWork.Context;
+using Blog.SharedKernel.SeedWork.Context;
 
-namespace TgaCase.SharedKernel.SeedWork.Repository
+namespace Blog.SharedKernel.SeedWork.Repository
 {
-public class UnitOfWork<T> : IUnitOfWork<T> where T : class, IDbContext
+    public class UnitOfWork<T> : IUnitOfWork<T> where T : class, IDbContext
     {
         public T Context { get; }
 
@@ -59,11 +59,11 @@ public class UnitOfWork<T> : IUnitOfWork<T> where T : class, IDbContext
                 }
                 catch
                 {
-                
+
                     Context.Transaction.Rollback();
 
                     throw;
-                }                
+                }
             }
         }
 
@@ -89,7 +89,7 @@ public class UnitOfWork<T> : IUnitOfWork<T> where T : class, IDbContext
                 Context.Transaction.Dispose();
                 Context.Transaction = null;
             }
-    
+
             if (Context.Connection != null)
             {
                 switch (Context.Connection.State)
@@ -99,10 +99,10 @@ public class UnitOfWork<T> : IUnitOfWork<T> where T : class, IDbContext
                     case ConnectionState.Open | ConnectionState.Fetching:
                         Context.Connection.Close();
                         break;
-                }    
-                
+                }
+
                 Context.Connection.Dispose();
-                Context.Connection = null;                
+                Context.Connection = null;
             }
         }
     }

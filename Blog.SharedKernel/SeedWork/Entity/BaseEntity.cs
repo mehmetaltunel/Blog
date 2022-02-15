@@ -1,4 +1,4 @@
-namespace TgaCase.SharedKernel.SeedWork.Entity
+namespace Blog.SharedKernel.SeedWork.Entity
 {
     public abstract class BaseEntity
     {

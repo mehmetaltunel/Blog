@@ -1,6 +1,6 @@
-namespace TgaCase.SharedKernel.Extensions
+namespace Blog.SharedKernel.Extensions
 {
-    public static class DecimalExtensions 
+    public static class DecimalExtensions
     {
         public static string ToTurkishCurrency(this decimal str)
         {

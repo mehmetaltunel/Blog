@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Data;
-using TgaCase.SharedKernel.SeedWork.Repository;
+using Blog.SharedKernel.SeedWork.Repository;
 
-namespace TgaCase.SharedKernel.Utilities
+namespace Blog.SharedKernel.Utilities
 {
     public static class GenericUtil<TEntity>
     {
@@ -28,10 +28,10 @@ namespace TgaCase.SharedKernel.Utilities
             {
                 case "System.Int64":
                     return DbType.Int64;
-                break;
+                    break;
                 case "System.String":
                     return DbType.String;
-                break;
+                    break;
                 case "System.Int32":
                     return DbType.Int32;
                     break;

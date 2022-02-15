@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace Blog.Common.A
+namespace Blog.BM.Api
 {
     public class Startup
     {
@@ -26,10 +26,11 @@ namespace Blog.Common.A
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "Blog.Common.A", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Blog.BM.Api", Version = "v1" });
             });
         }
 
@@ -40,7 +41,7 @@ namespace Blog.Common.A
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Blog.Common.A v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Blog.BM.Api v1"));
             }
 
             app.UseHttpsRedirection();
@@ -49,7 +50,10 @@ namespace Blog.Common.A
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

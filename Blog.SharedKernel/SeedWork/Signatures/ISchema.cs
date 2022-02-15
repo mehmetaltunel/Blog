@@ -1,7 +1,7 @@
-namespace TgaCase.SharedKernel.SeedWork.Signatures
+namespace Blog.SharedKernel.SeedWork.Signatures
 {
     public interface ISchema
     {
-        
+
     }
 }

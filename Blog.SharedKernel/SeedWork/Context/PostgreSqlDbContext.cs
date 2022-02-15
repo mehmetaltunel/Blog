@@ -1,6 +1,6 @@
 using Npgsql;
 
-namespace TgaCase.SharedKernel.SeedWork.Context
+namespace Blog.SharedKernel.SeedWork.Context
 {
     public class PostgreSqlDbContext : DbContext, IPostgreSqlDbContext
     {
